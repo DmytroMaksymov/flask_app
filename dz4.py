@@ -28,8 +28,8 @@ def source_code():
         return render_template('content.html', text=fo.read())
 
 
-@app.route('/random', methods=['GET', 'POST'])
-def a():
+@app.route('/casual_string', methods=['GET', 'POST'])
+def casual_string():
     """get user's parameters where lenght = count symbols,
     specials and digits are boolean type, if bool=True add them to random string"""
     length = request.args.get('length', type=int)
@@ -59,7 +59,7 @@ def hello():
     return '<h1>Hello there!</h1>' \
            'Type "/whoami" to check your ip, browser and servertime<br>' \
            '<br>Type "/source_code" to check application source code<br>' \
-           '<h4>Type "/random?length=42&specials=0&digits=0" to create random string</h4>' \
+           '<h4>Type "/casual_string?length=42&specials=0&digits=0" to create random string</h4>' \
            'Where length is count of symbols' \
            '<br>if you want to add digits (0-9) -> type digits=1' \
            '<br>if you want to add specials symbols (!"#$%&()*\+,-./:;<=>?_@[]^`{|}~) -> type specials=1' \
