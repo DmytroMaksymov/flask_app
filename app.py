@@ -15,8 +15,7 @@ def whoami():
     servertime = servertime.strftime("%H:%M:%S")
     return f"Your IP:  {user_ip}" \
            f"<br>Your browser: {browser}" \
-           f"<br> Servertime : {servertime}</br>" \
-
+           f"<br> Servertime : {servertime}</br>"
 
 
 @app.route('/source_code')
